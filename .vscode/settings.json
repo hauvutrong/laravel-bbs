@@ -1,0 +1,4 @@
+{
+    "php.format.codeStyle": "PSR-2",
+    "git.ignoreLimitWarning": true
+}
