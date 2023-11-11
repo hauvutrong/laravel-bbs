@@ -47,7 +47,6 @@
     @endif
   </div>
 
-
   <script>
     var app = {}
     app.debug = '{{ config('app.debug') }}'

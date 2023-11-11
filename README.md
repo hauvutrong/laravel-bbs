@@ -16,9 +16,9 @@
 - visual studio code
 - My sql work bench
 - docker dektop
-- cài đặt Untutu trên windown để sử dụng WSL
+- cài đặt Untutu trên VSC để sử dụng WSL
 
-```bash
+```bash --> warning : use powershell WSL
 // Clone source code.
 $ git clone https://github.com/hauvutrong/laravel-bbs.git
 
@@ -38,7 +38,17 @@ $ bash ./vendor/laravel/sail/bin/sail up
 $ docker exec -it laravel-bbs-app /bin/bash
 
 // Execute migration command.
+## install mysql ddl
+$ sudo apt-get install php-mysql
+## php-mbstring
+$ sudo apt-get install php-mbstring
+##php-intl
+$ sudo apt-get install php-intl
+## Seeders db
 $ php artisan migrate --seed
+
+// start laravel (http://127.0.0.1:8000) >>> warning : use powershell teminal 
+$ php artisan serve
 ```
 
 ## Screenshots

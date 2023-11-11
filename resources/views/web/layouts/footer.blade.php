@@ -1,6 +1,6 @@
 <div class="container">
   <p class="float-left">
-    🔥 由 <a href="#" target="_blank"> LaravelBBS</a> 团队设计和编码
+    🔥 由 <a href="#" target="_blank"> HAUVT</a> AUTHOR 
     <span style="color: #e27575;font-size: 14px;">♥️</span>
   </p>
   <p class="float-right">
