@@ -13,18 +13,26 @@
 
 > This project requires PHP 8+ and Laravel 9.
 
+- visual studio code
+- My sql work bench
+- docker dektop
+- cài đặt Untutu trên windown để sử dụng WSL
+
 ```bash
 // Clone source code.
-$ git clone git@github.com:imajinyun/laravel-bbs.git
+$ git clone https://github.com/hauvutrong/laravel-bbs.git
 
 // Copy .env.development to .env, and fill in the relevant configuration values.
 $ cd laravel-bbs && cp .env.development .env
 
 // Install dependencies for application.
-$ composer install
+$ composer install --ignore-platform-req=ext-pcntl --ignore-platform-req=ext-sodium --ignore-platform-req=ext-sockets --ignore-platform-req=ext-posix
+
+//gen key
+php artisan key:generate
 
 // To start Sail.
-$ ./vendor/bin/sail up
+$ bash ./vendor/laravel/sail/bin/sail up
 
 // Enter laravel-bbs-app container.
 $ docker exec -it laravel-bbs-app /bin/bash
@@ -37,8 +45,37 @@ $ php artisan migrate --seed
 
 ![laravel-bbs-frontend](./public/img/bbs.jpg)
 
-## About
+## command laravel 
+--create file dupb autoload
+composer dump-autoload
+--start laravel
+php artisan serve
+--clean cache
+php artisan cache:clear
 
 ## License
 
-The Laravel BBS is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Cài untubu wsl
+
+--update version php
+## >>>> Install redis client
+Hệ thống con Windows cho Linux và Linux
+Redis chưa hỗ trợ chính xác hệ điều hành Windows nên bạn có thể cài đặt WSL (Windows Subsystem for Linux) trên windows để có môi trường Linux.
+
+Để cài đặt Redis trên Linux, hãy chạy:
+
+curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
+
+echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
+
+sudo apt-get update
+sudo apt-get install redis
+Sau đó, chạy lệnh này để khởi động Redis:
+
+sudo service redis-server start
+## <<<<
+
+## check port ex
+netstat -ano | findstr :<PORT>
+## Kill port ex
+taskkill /PID 0 /F
