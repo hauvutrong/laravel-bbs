@@ -26,6 +26,7 @@ $ git clone https://github.com/hauvutrong/laravel-bbs.git
 $ cd laravel-bbs && cp .env.development .env
 
 // Install dependencies for application.
+## rm vendor -> rm composer.lock -> rm bootstrap (*.php)
 $ composer install --ignore-platform-req=ext-pcntl --ignore-platform-req=ext-sodium --ignore-platform-req=ext-sockets --ignore-platform-req=ext-posix
 
 //gen key
@@ -35,7 +36,7 @@ php artisan key:generate
 $ bash ./vendor/laravel/sail/bin/sail up
 
 // Enter laravel-bbs-app container.
-$ docker exec -it laravel-bbs-app /bin/bash
+$ docker exec -it aa62edf9495e0abaca5291cf7eb6dc61cfe8c84ae9337cad2d56b439b8ff9039-mysql-1 /bin/bash
 
 // Execute migration command.
 ## install mysql ddl
