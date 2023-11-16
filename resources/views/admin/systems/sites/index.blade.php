@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 
-@section('title', '站点设置')
+@section('title', 'Cài đặt Trang web')
 
 @section('sidebar')
   @php($sidebar = 'system')
@@ -18,7 +18,7 @@
     <fieldset>
       <div class="form-group">
         <div class="col-md-2 control-label">
-          <label for="name">网站名称</label>
+          <label for="name">Tên trang web</label>
         </div>
         <div class="col-md-8 controls">
           <input type="text" id="name" name="name" class="form-control" value="{{ $site['name'] }}">
@@ -27,7 +27,7 @@
 
       <div class="form-group">
         <div class="col-md-2 control-label">
-          <label for="slogan">网站副标题</label>
+          <label for="slogan">Phụ đề trang web</label>
         </div>
         <div class="col-md-8 controls">
           <input type="text" id="slogan" name="slogan" class="form-control" value="{{ $site['slogan'] }}">
@@ -36,69 +36,69 @@
 
       <div class="form-group">
         <div class="col-md-2 control-label">
-          <label for="url">网站域名</label>
+          <label for="url">Tên miền trang web</label>
         </div>
         <div class="col-md-8 controls">
           <input type="text" id="url" name="url" class="form-control" value="{{ $site['url'] }}">
-          <p class="help-block">以『<b>http:// 或 https://</b>』开头</p>
+          <p class="help-block">以『<b>http:// or https://</b>』开头</p>
         </div>
       </div>
 
       <div class="form-group">
         <div class="col-md-2 control-label">
-          <label for="logo">网站LOGO</label>
+          <label for="logo">Biểu tượng trang web</label>
         </div>
         <div class="col-md-8 controls">
           <div id="site-logo-container"></div>
           <a class="btn btn-default webuploader-container" id="site-logo-upload"
              data-upload-token=""
              data-goto-url="" data-widget-cid="widget-0">
-            <div class="webuploader-pick">上传</div>
+            <div class="webuploader-pick">Tải lên</div>
           </a>
           <button class="btn btn-default" id="site-logo-remove" type="button"
-                  data-url="" style="display:none;">删除
+                  data-url="" style="display:none;">Xóa bỏ
           </button>
-          <p class="help-block">请上传jpg, gif, png格式的图片。logo 图片尺寸建议不超过250×50px。图片大小建议不超过2MB。<br><a
-              href="" target="_blank">如何制作合适的图片？</a>网校 logo 设置后将显示顶部导航左侧，<a
-              href="" target="_blank">点击查看</a></p>
+          <p class="help-block">Vui lòng tải lên hình ảnh ở định dạng jpg, gif, png. Khuyến cáo rằng kích thước hình ảnh logo không được vượt quá 250×50px. Khuyến cáo rằng kích thước hình ảnh không được vượt quá 2 MB.<br><a
+              href="" target="_blank">Làm sao để có được một bức tranh phù hợp?</a>Sau khi đặt logo trường học trực tuyến sẽ hiển thị ở bên trái thanh điều hướng trên cùng，<a
+              href="" target="_blank">Bấm vào để xem</a></p>
           <input type="hidden" name="logo" value="">
         </div>
       </div>
 
       <div class="form-group">
         <div class="col-md-2 control-label">
-          <label for="favicon">浏览器图标</label>
+          <label for="favicon">Biểu tượng trình duyệt</label>
         </div>
         <div class="col-md-8 controls">
           <div id="site-favicon-container"></div>
           <a class="btn btn-default webuploader-container" id="site-favicon-upload"
              data-upload-token=""
              data-goto-url="" data-widget-cid="widget-1">
-            <div class="webuploader-pick">上传</div>
+            <div class="webuploader-pick">Tải lên</div>
           </a>
           <button class="btn btn-default" id="site-favicon-remove" type="button"
-                  data-url="" style="display:none;">删除
+                  data-url="" style="display:none;">Xóa bỏ
           </button>
-          <p class="help-block">建议上传ico格式的图标文件，支持 ico, jpg, gif, png等格式, 建议尺寸 32×32px。<br><a
-              href="" target="_blank">如何制作合适的图片？</a></p>
+          <p class="help-block">Bạn nên tải lên các tệp biểu tượng ở định dạng ico. ico, jpg, gif, png và các định dạng khác được hỗ trợ. Kích thước được đề xuất là 32×32px.<br><a
+              href="" target="_blank">Làm sao để có được một bức tranh phù hợp?</a></p>
           <input type="hidden" name="favicon" value="">
         </div>
       </div>
 
       <div class="form-group">
         <div class="col-md-2 control-label">
-          <label for="seo_keywords">SEO关键词</label>
+          <label for="seo_keywords">Từ khóa SEO</label>
         </div>
         <div class="col-md-8 controls">
           <input type="text" id="seo_keywords" name="seo_keywords" class="form-control"
                  value="{{ $site['seo_keywords'] }}">
-          <p class="help-block">设置多个关键词请用半角逗号","隔开。</p>
+          <p class="help-block">Để đặt nhiều từ khóa, vui lòng phân tách chúng bằng dấu phẩy nửa độ rộng ","。</p>
         </div>
       </div>
 
       <div class="form-group">
         <div class="col-md-2 control-label">
-          <label for="seo_description">SEO描述信息</label>
+          <label for="seo_description">Thông tin mô tả SEO</label>
         </div>
         <div class="col-md-8 controls">
           <input type="text" id="seo_description" name="seo_description" class="form-control"
@@ -108,17 +108,17 @@
 
       <div class="form-group">
         <div class="col-md-2 control-label">
-          <label for="copyright">课程内容版权方</label>
+          <label for="copyright">Chủ sở hữu bản quyền nội dung khóa học</label>
         </div>
         <div class="col-md-8 controls">
           <input type="text" id="copyright" name="copyright" class="form-control" value="{{ $site['copyright'] }}">
-          <div class="help-block">您可以填写网站名称或公司名称。</div>
+          <div class="help-block">Bạn có thể điền tên website hoặc tên công ty.</div>
         </div>
       </div>
 
       <div class="form-group">
         <div class="col-md-2 control-label">
-          <label for="icp">ICP备案号</label>
+          <label for="icp">Số đăng ký ICP</label>
         </div>
         <div class="col-md-8 controls">
           <input type="text" id="icp" name="icp" class="form-control" value="{{ $site['icp'] }}">
@@ -128,19 +128,19 @@
     <br>
 
     <fieldset>
-      <legend>网站统计分析代码部署</legend>
+      <legend>Triển khai mã phân tích thống kê website</legend>
       <div class="form-group">
         <div class="col-md-2 control-label">
-          <label for="analytics">统计分析代码</label>
+          <label for="analytics">Mã phân tích thống kê</label>
         </div>
         <div class="col-md-8 controls">
           <textarea id="analytics" name="analytics" class="form-control" rows="4"></textarea>
-          <p class="help-block">统计代码是网站统计软件发布的一段代码，用以统计添加统计代码的网站的数据。</p>
-          <p class="help-block">包括网站的访客来源，从哪个网页跳转到此网站，搜索什么关键词到网站，一共有多少人访问，每天多少人多少IP，平均访问时间是多少等等数据。</p>
+          <p class="help-block">Mã thống kê là một đoạn mã do phần mềm thống kê website đưa ra để đếm số liệu của website bổ sung mã thống kê.</p>
+          <p class="help-block">Bao gồm nguồn khách truy cập vào trang web, trang web nào chuyển đến trang web này, từ khóa nào được tìm kiếm cho trang web, tổng số người truy cập, bao nhiêu người và IP mỗi ngày, thời gian truy cập trung bình là bao nhiêu, v.v.</p>
           <p class="help-block">
-            统计分析工具可以分析网校访问趋势，以及根据数据做推广调整，优化网校资源，建议使用
-            <a href="http://tongji.baidu.com" target="_blank">百度统计</a>、
-            <a href="http://ta.qq.com/" target="_blank">腾讯分析</a>或者
+          Các công cụ phân tích thống kê có thể phân tích xu hướng tham quan trường học trực tuyến, điều chỉnh chương trình khuyến mãi dựa trên dữ liệu và tối ưu hóa tài nguyên trường học trực tuyến. Nên sử dụng
+            <a href="http://tongji.baidu.com" target="_blank">Thống kê của Baidu</a>、
+            <a href="http://ta.qq.com/" target="_blank">Phân tích của Tencent</a>Hoặc
             <a target="_blank" href="http://www.umeng.com/">CNZZ。</a>
           </p>
         </div>
@@ -148,36 +148,36 @@
     </fieldset>
 
     <fieldset style="display:none;">
-      <legend>站点状态</legend>
+      <legend>Trạng thái trang web</legend>
 
       <div class="form-group">
         <div class="col-md-2 control-label">
-          <label>站点状态</label>
+          <label>Trạng thái trang web</label>
         </div>
         <div class="col-md-8 controls radios">
           <label>
-            <input type="radio" name="status" value="open" @if ($site['status'] === 'open') checked @endif> 开放
+            <input type="radio" name="status" value="open" @if ($site['status'] === 'open') checked @endif> Mở
           </label>
           <label>
-            <input type="radio" name="status" value="closed" @if ($site['status'] === 'closed') checked @endif> 关闭
+            <input type="radio" name="status" value="closed" @if ($site['status'] === 'closed') checked @endif> Khép kín
           </label>
         </div>
       </div>
 
       <div class="form-group">
         <div class="col-md-2 control-label">
-          <label for="closed_note">网站关闭公告</label>
+          <label for="closed_note">Thông báo đóng cửa trang web</label>
         </div>
         <div class="col-md-8 controls">
           <textarea id="closed_note" name="closed_note" class="form-control" rows="4"></textarea>
-          <p class="help-block">网站处于关闭状态时，用户访问网站将显示此公告，支持HTML代码。</p>
+          <p class="help-block">Khi trang web đóng cửa, thông báo này sẽ được hiển thị khi người dùng truy cập trang web và mã HTML được hỗ trợ.</p>
         </div>
       </div>
     </fieldset>
 
     <div class="row form-group">
       <div class="controls col-md-offset-2 col-md-8">
-        <button type="button" class="btn btn-primary" id="site-info-btn">提交</button>
+        <button type="button" class="btn btn-primary" id="site-info-btn">Nộp</button>
       </div>
     </div>
   </form>

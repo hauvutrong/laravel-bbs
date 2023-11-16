@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 
-@section('title', '友情链接')
+@section('title', 'Liên kết')
 
 @section('sidebar')
   @php($sidebar = 'system')
@@ -8,7 +8,7 @@
 
 @section('action')
   <a class="btn btn-success btn-sm" data-url="{{ route('admin.systems.links.create') }}"
-     data-toggle="modal" data-target="#modal">添加友情链接</a>
+     data-toggle="modal" data-target="#modal">Thêm liên kết thân thiện</a>
 @stop
 
 @section('javascript')
@@ -19,10 +19,10 @@
   <table id="navigation-table" class="table table-striped table-hover navigation-table sortable-list">
     <thead>
     <tr>
-      <th width="50%">名称</th>
-      <th width="10%">新开窗口</th>
-      <th width="10%">状态</th>
-      <th width="30%">操作</th>
+      <th width="50%">Tên</th>
+      <th width="10%">Mở cửa sổ mới</th>
+      <th width="10%">Tình trạng</th>
+      <th width="30%">Vận hành</th>
     </tr>
     </thead>
 
@@ -44,11 +44,11 @@
             <button class="btn btn-sm btn-default edit-btn"
                     data-url="{{ route('admin.systems.links.destroy', $link) }}"
                     data-toggle="modal"
-                    data-target="#modal">删除
+                    data-target="#modal">Xóa bỏ
             </button>
             <button class="btn btn-sm btn-default edit-btn"
                     data-url="{{ route('admin.systems.links.edit', $link) }}" data-toggle="modal"
-                    data-target="#modal">编辑
+                    data-target="#modal">Biên tập
             </button>
           </td>
         </tr>

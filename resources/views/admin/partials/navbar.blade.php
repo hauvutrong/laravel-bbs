@@ -9,15 +9,15 @@
 <ul class="nav navbar-nav navbar-right">
   <li data-url="#" class="">
     <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
-      <span class="glyphicon glyphicon-list admin-star"></span> 常用
+      <span class="glyphicon glyphicon-list admin-star"></span>Thường được sử dụng
     </a>
     <ul class="dropdown-menu shortcuts">
       <li class="shortcut-add" data-url="#">
-        <a href="javascript:;"><i class="glyphicon glyphicon-plus"></i> 添加当前页面为常用功能</a>
+        <a href="javascript:;"><i class="glyphicon glyphicon-plus"></i>Thêm trang hiện tại làm chức năng được sử dụng thường xuyên</a>
       </li>
     </ul>
   </li>
-  <li><a href="{{ route('topics.index') }}"><i class="glyphicon glyphicon-home"></i> 回首页</a></li>
+  <li><a href="{{ route('topics.index') }}"><i class="glyphicon glyphicon-home"></i>Trở về trang chủ</a></li>
   <li class="dropdown">
     <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
       <i class="glyphicon glyphicon-user"></i> {{ auth()->user()->name }}
@@ -25,9 +25,9 @@
     </a>
     <ul class="dropdown-menu main-list">
       <li>
-        <a href="#"><i class="es-icon es-icon-event mrs" style="vertical-align: middle;"></i>我的中心</a>
+        <a href="#"><i class="es-icon es-icon-event mrs" style="vertical-align: middle;"></i>Trung tâm của tôi</a>
       </li>
-      <li><a href="#"><i class="es-icon es-icon-book mrs"></i>我的学习</a></li>
+      <li><a href="#"><i class="es-icon es-icon-book mrs"></i>Những nghiên cứu của tôi</a></li>
       <li>
         <a href="#">
           <form action="{{ route('logout') }}" method="POST">

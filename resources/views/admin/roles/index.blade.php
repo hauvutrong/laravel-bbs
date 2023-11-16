@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 
-@section('title', '角色管理')
+@section('title', 'Quản lý vai trò')
 
 @section('sidebar')
   @php($sidebar = 'system')
@@ -8,37 +8,37 @@
 
 @section('action')
   <a class="btn btn-success btn-sm" data-url="{{ route('admin.roles.create') }}"
-     data-toggle="modal" data-target="#modal">添加角色</a>
+     data-toggle="modal" data-target="#modal">Thêm vai trò</a>
 @stop
 
 @section('content')
   <form id="role-search-form" class="form-inline well well-sm" action="" method="get" novalidate="novalidate">
     <select class="form-control" name="datePicker" id="datePicker">
-      <option value="">--时间类型--</option>
-      <option value="longinDate">登录时间</option>
-      <option value="registerDate">注册时间</option>
+      <option value="">--Loại thời gian--</option>
+      <option value="longinDate">Thời gian đăng nhập</option>
+      <option value="registerDate">Thời gian đăng ký</option>
     </select>
     <div class="form-group ">
-      <input class="form-control" type="text" id="startDate" name="startDate" value="" placeholder="起始时间">
+      <input class="form-control" type="text" id="startDate" name="startDate" value="" placeholder="Thời gian bắt đầu">
       -
-      <input class="form-control" type="text" id="endDate" name="endDate" value="" placeholder="结束时间">
+      <input class="form-control" type="text" id="endDate" name="endDate" value="" placeholder="Thời gian kết thúc">
     </div>
     <div class="form-group">
-      <input type="text" id="keyword" name="keyword" class="form-control" value="" placeholder="关键词">
+      <input type="text" id="keyword" name="keyword" class="form-control" value="" placeholder="Từ khóa">
     </div>
-    <button class="btn btn-primary">搜索</button>
+    <button class="btn btn-primary">Tìm kiếm</button>
   </form>
   <p class="text-muted">
-    <span class="mrl">用户总数：<strong class="inflow-num">{{ $count }}</strong></span>
+    <span class="mrl">Tổng số người dùng：<strong class="inflow-num">{{ $count }}</strong></span>
   </p>
   <table id="user-table" class="table table-striped table-hover" data-search-form="#user-search-form">
     <thead>
     <tr>
-      <th>角色名称</th>
-      <th>角色编码</th>
-      <th>创建时间</th>
-      <th>更新时间</th>
-      <th width="10%">操作</th>
+      <th>Tên vai trò</th>
+      <th>Mã hóa vai trò</th>
+      <th>Thời gian sáng tạo</th>
+      <th>Cập nhật thời gian</th>
+      <th width="10%">Vận hành</th>
     </tr>
     </thead>
     <tbody>
@@ -51,34 +51,34 @@
                  data-url="#">{{ $role->name }}</a>
             </strong>
             <br>
-            <span class="text-muted text-sm">站长 维护者 用户</span>
+            <span class="text-muted text-sm">Người dùng bảo trì quản trị trang web</span>
           </td>
           <td>{{ $role->slug }}</td>
           <td>
             <span class="text-sm">{{ $role->created_at }}</span>
             <br>
-            <span class="text-muted text-sm"><a href="#" target="_blank">127.0.0.1</a> 本机地址</span>
+            <span class="text-muted text-sm"><a href="#" target="_blank">127.0.0.1</a> Địa chỉ địa phương</span>
             <span></span>
           </td>
           <td>
             <span class="text-sm">2019-3-15 10:38:59</span>
             <br>
             <span class="text-muted text-sm">
-                  <a class="text-muted text-sm" href="#" target="_blank">192.168.33.1</a>局域网
+                  <a class="text-muted text-sm" href="#" target="_blank">192.168.33.1</a>Mạng lưới khu vực địa phương
                 </span>
           </td>
           <td></td>
           <td>
             <div class="btn-group">
               <a href="#modal" data-toggle="modal" data-url="{{ route('admin.roles.show', $role) }}"
-                 class="btn btn-default btn-sm">查看</a>
+                 class="btn btn-default btn-sm">Kiểm tra</a>
               <a href="#" type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
                 <span class="caret"></span>
               </a>
               <ul class="dropdown-menu">
                 <li>
                   <a href="#modal" data-toggle="modal" data-url="{{ route('admin.roles.edit', $role) }}"
-                     data-target="#modal" title="编辑用户信息">编辑角色</a>
+                     data-target="#modal" title="Chỉnh sửa thông tin người dùng">Chỉnh sửa vai trò</a>
                 </li>
               </ul>
             </div>
