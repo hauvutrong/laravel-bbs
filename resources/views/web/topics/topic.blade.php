@@ -1,6 +1,6 @@
 @extends('web.layouts.app')
 
-@section('title', $topic->id ? '编辑话题' : '新建话题')
+@section('title', $topic->id ? 'edit' : 'create')
 
 @section('styles')
 <link rel="stylesheet" href="{{ asset('css/simditor.css') }}">
@@ -22,7 +22,7 @@
         },
         fileKey: 'uploader',
         connectionCount: 3,
-        leaveConfirm: '文件上传中，关闭此页面将取消上传。'
+        leaveConfirm: 'Tệp đang được tải lên. Đóng trang này sẽ hủy quá trình tải lên.'
       },
       pasteImage: true
     })
@@ -47,7 +47,8 @@
     <div class="card">
       <div class="card-body">
         <h2 class="">
-          <i class="fa fa-edit"></i> @if($topic->id)编辑话题@else新建话题@endif
+          <i class="fa fa-edit"></i> @if($topic->id)edit@else
+            create@endif
         </h2>
         <hr>
 
@@ -61,9 +62,9 @@
           @endif
 
           <div class="form-group">
-            <label for="title-field">标题</label>
+            <label for="title-field">Tiêu đề</label>
             <input class="form-control" type="text" name="title" id="title-field"
-              value="{{ old('title', $topic->title ) }}" placeholder="请填写标题">
+              value="{{ old('title', $topic->title ) }}" placeholder="Vui lòng điền tiêu đề">
 
             @if ($errors->has('title'))
             <span class="invalid-feedback" role="alert">
@@ -72,9 +73,9 @@
             @endif
           </div>
           <div class="form-group">
-            <label for="category-id-field">分类</label>
+            <label for="category-id-field">Phân loại</label>
             <select class="form-control" name="category_id" id="category-id-field">
-              <option value="" hidden disabled {{ $topic->id ? '' : 'selected' }}>请选择分类</option>
+              <option value="" hidden disabled {{ $topic->id ? '' : 'selected' }}>Vui lòng chọn một loại</option>
               @foreach ($categories as $value)
               @php
               $selected = $topic->category_id === $value->id ? 'selected' : '';
@@ -84,17 +85,17 @@
             </select>
           </div>
           <div class="form-group">
-            <label for="editor">内容</label>
+            <label for="editor">Nội dung</label>
             <textarea class="form-control" name="body" id="editor" rows="3"
-              placeholder="请填入至少三个字符的内容">{{ old('body', $topic->body ) }}</textarea>
+              placeholder="Vui lòng nhập ít nhất ba ký tự">{{ old('body', $topic->body ) }}</textarea>
           </div>
           <div class="form-group row mb-0">
             <div class="col-md-6">
               <a class="btn btn-outline-primary" href="{{ route('topics.index') }}">
-                <i class="fa fa-backward"></i> 返回
+                <i class="fa fa-backward"></i> Quay lại
               </a>
               <button type="submit" class="btn btn-outline-primary">
-                <i class="fa fa-save"></i> 保存
+                <i class="fa fa-save"></i> Lưu
               </button>
             </div>
           </div>

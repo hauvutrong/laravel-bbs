@@ -1,6 +1,6 @@
 @extends('web.layouts.app')
 
-@section('title', isset($category) ? $category->name : '话题列表')
+@section('title', isset($category) ? $category->name : 'Danh sách bài đăng')
 
 @section('content')
 <div class="row mb-5">
@@ -17,20 +17,20 @@
         <ul class="nav nav-pills">
           <li class="nav-item">
             <a href="{{ Request::url() }}?order=default"
-              class="nav-link {{ active_class(! if_query('order', 'recent')) }}">最后回复</a>
+              class="nav-link {{ active_class(! if_query('order', 'recent')) }}">Trả lời cuối cùng</a>
           </li>
           <li class="nav-item">
             <a href="{{ Request::url() }}?order=recent"
-              class="nav-link {{ active_class(if_query('order', 'recent')) }}">最新发布</a>
+              class="nav-link {{ active_class(if_query('order', 'recent')) }}">Những bài đăng mới nhất</a>
           </li>
         </ul>
       </div>
 
       <div class="card-body">
-        {{-- 主题列表 --}}
+        {{-- Topic list --}}
         @include('web.topics.partials.topics', ['topics' => $topics])
 
-        {{-- 分页 --}}
+        {{-- Pagination --}}
         <div class="mt-5">
           {!! $topics->appends(Request::except('page'))->render() !!}
         </div>

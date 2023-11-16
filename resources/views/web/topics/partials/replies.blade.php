@@ -11,14 +11,14 @@
           <i class="fa fa-user"></i> {{ $reply->user->name }}
         </a>
         <span class="text-secondary">&nbsp;•&nbsp;</span>
-        <span title="最后活跃于" class="text-secondary timeago">
+        <span title="lastActive" class="text-secondary timeago">
           <i class="fa fa-clock"></i> {{ $reply->created_at->diffForHumans() }}
         </span>
 
-        {{-- 回复评论删除按钮 --}}
+        {{-- Reply comment delete button --}}
         @can('destroy', $reply)
         <form action="{{ route('replies.destroy', $reply->id) }}" method="POST" accept-charset="UTF-8"
-          style="display: inline;" onsubmit="return confirm('你确定要删除此条评论？')">
+          style="display: inline;" onsubmit="return confirm('Bạn có chắc là bạn muốn xoá bình luận này không?')">
           @csrf
           @method('DELETE')
           <span class="meta float-right">

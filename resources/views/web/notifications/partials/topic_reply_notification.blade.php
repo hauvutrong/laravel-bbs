@@ -16,7 +16,7 @@
         {{ $notification->data['topic_title'] }}
       </a>
 
-      {{-- 回复删除按钮 --}}
+      {{-- Hồi đáp (rep tin nhắn) / Xoá / Nút ấn --}}
       <span class="pull-right" title="{{ $notification->created_at }}">
         <i class="fa fa-clock"></i> {{ $notification->created_at->diffForHumans() }}
       </span>

@@ -1,13 +1,13 @@
 @extends('web.layouts.app')
 
-@section('title', $user->name . ' - 编辑资料')
+@section('title', $user->name . ' - Chỉnh sửa thông tin')
 
 @section('content')
 <div class="row justify-content-center">
   <div class="col-md-8">
     <div class="card">
       <div class="card-header">
-        <h4><i class="fa fa-edit"></i> 编辑个人资料</h4>
+        <h4><i class="fa fa-edit"></i> Chỉnh sửa hồ sơ</h4>
       </div>
 
       <div class="card-body">
@@ -16,7 +16,7 @@
           @csrf
           @method('PUT')
           <div class="form-group row">
-            <label for="name-field" class="col-sm-4 col-form-label text-md-right">用&ensp;户&ensp;名</label>
+            <label for="name-field" class="col-sm-4 col-form-label text-md-right">Tên tài khoản</label>
 
             <div class="col-md-6">
               <input id="name-field" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}"
@@ -30,7 +30,7 @@
           </div>
 
           <div class="form-group row">
-            <label for="email-field" class="col-sm-4 col-form-label text-md-right">邮&emsp;&emsp;箱</label>
+            <label for="email-field" class="col-sm-4 col-form-label text-md-right">Hộp thư</label>
 
             <div class="col-md-6">
               <input id="email-field" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"
@@ -44,7 +44,7 @@
           </div>
 
           <div class="form-group row">
-            <label for="introduction-field" class="col-md-4 col-form-label text-md-right">个人简介</label>
+            <label for="introduction-field" class="col-md-4 col-form-label text-md-right">Thông tin cá nhân</label>
 
             <div class="col-md-6">
               <textarea id="introduction-field"
@@ -59,7 +59,7 @@
           </div>
 
           <div class="form-group row">
-            <label for="avatar-field" class="col-md-4 col-form-label text-md-right">个人头像</label>
+            <label for="avatar-field" class="col-md-4 col-form-label text-md-right">Ảnh đại diện</label>
 
             <div class="col-md-6">
               <input type="file" class="form-control{{ $errors->has('avatar') ? ' is-invalid' : '' }}" name="avatar">
@@ -70,7 +70,7 @@
               @endif
               @if ($user->avatar)
               <br>
-              <img class="img-thumbnail" src="{{ cdn_aliyun($user->avatar) }}" alt="个人头像">
+              <img class="img-thumbnail" src="{{ cdn_aliyun($user->avatar) }}" alt="avatar">
               @endif
             </div>
           </div>
@@ -78,7 +78,7 @@
           <div class="form-group row mb-0">
             <div class="col-md-8 offset-md-4">
               <button type="submit" class="btn btn-outline-primary">
-                <i class="fa fa-save"></i> 保存
+                <i class="fa fa-save"></i> Lưu
               </button>
             </div>
           </div>

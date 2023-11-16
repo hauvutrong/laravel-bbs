@@ -8,7 +8,7 @@
   <div class="col-lg-3 col-md-3 hidden-sm hidden-xs author-info">
     <div class="card ">
       <div class="card-body">
-        <div class="text-center">作者：{{ $topic->user->name }}</div>
+        <div class="text-center">Tác giả:{{ $topic->user->name }}</div>
         <hr>
         <div class="media">
           <div align="center">
@@ -38,7 +38,7 @@
       <div class="card-body">
         @can('update', $topic)
         <a href="{{ route('topics.edit', $topic->id) }}" class="btn btn-outline-primary" role="button">
-          <i class="fa fa-edit"></i> 编辑
+          <i class="fa fa-edit"></i> Chỉnh sửa
         </a>
         @endcan
 
@@ -47,14 +47,14 @@
           @csrf
           @method('DELETE')
           <button class="btn btn-outline-danger" type="submit">
-            <i class="fa fa-trash"></i> 删除
+            <i class="fa fa-trash"></i> Xoá bỏ
           </button>
         </form>
         @endcan
       </div>
     </div>
 
-    {{-- 用户话题的回复列表 --}}
+    {{-- Danh sách trả lời các chủ đề của người dùng --}}
     <div class="card topic-reply mt-4">
       <div class="card-body">
         @includeWhen(Auth::check(), 'web.topics.partials.replybox', ['topic' => $topic])

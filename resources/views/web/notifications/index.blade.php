@@ -1,6 +1,6 @@
 @extends('web.layouts.app')
 
-@section('title', '我的通知')
+@section('title', 'my notifications')
 
 @section('content')
   <div class="container">
@@ -10,7 +10,7 @@
 
           <div class="card-body">
             <h3 class="text-xs-center">
-              <i class="fa fa-bell"></i> 我的通知
+              <i class="fa fa-bell"></i> Thông báo của tôi
             </h3>
             <hr>
 
@@ -22,7 +22,7 @@
                 {!! $notifications->render() !!}
               </div>
             @else
-              <div class="alert alert-warning" role="alert">暂无数据 ~_~</div>
+              <div class="alert alert-warning" role="alert">Không có dữ liệu ~_~</div>
             @endif
           </div>
         </div>
