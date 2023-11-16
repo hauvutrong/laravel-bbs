@@ -1,11 +1,11 @@
-{{-- 用户话题列表 --}}
+{{-- Danh sách chủ đề người dùng --}}
 @if (count($topics))
 <ul class="list-group mt-4 border-0">
   @foreach ($topics as $topic)
   <li class="list-group-item pl-2 pr-2 border-right-0 border-left-0 @if($loop->first) border-top-0 @endif">
     <a href="{{ $topic->link() }}">{{ $topic->title }}</a>
     <span class="meta float-right text-secondary">
-      {{ $topic->reply_count }} 回复
+      {{ $topic->reply_count }} Hồi đáp
       <span> ⋅ </span>
       {{ $topic->created_at->diffForHumans() }}
     </span>
@@ -13,7 +13,7 @@
   @endforeach
 </ul>
 @else
-<div>🐥 暂无数据 ~_~</div>
+<div>🐥 Không có dữ liệu ~_~</div>
 @endif
 
 {{-- 分页 --}}

@@ -1,4 +1,4 @@
-{{-- 用户回复列表 --}}
+{{-- Danh sách phẩn hồi của người dùng --}}
 @if (count($replies))
 <ul class="list-group mt-4 border-0">
   @foreach ($replies as $reply)
@@ -9,16 +9,16 @@
     </a>
     <div class="reply-content mt-2 mb-2">{!! $reply->content !!}</div>
     <div class="text-secondary" style="font-size: 0.9em;">
-      <i class="fa fa-clock"></i> 回复于 {{ $reply->created_at->diffForHumans() }}
+      <i class="fa fa-clock"></i> Trả lời {{ $reply->created_at->diffForHumans() }}
     </div>
   </li>
   @endforeach
 </ul>
 @else
-<div class="alert alert-info" role="alert">暂无数据 ~_~</div>
+<div class="alert alert-info" role="alert">Không có dữ liệu ~_~</div>
 @endif
 
-{{-- 分页 --}}
+{{-- Phân trang --}}
 <div class="mt-4 pt-1">
   {!! $replies->appends(Request::except('page'))->render() !!}
 </div>

@@ -1,6 +1,6 @@
 @extends('web.layouts.app')
 
-@section('title', $user->name . ' - 个人中心')
+@section('title', $user->name . ' - Trung tâm cá nhân')
 
 @section('content')
 <div class="row">
@@ -8,13 +8,13 @@
     <div class="card ">
       <img class="card-img-top img-thumbnail" src="{{ cdn_aliyun($user->avatar) }}" alt="{{ $user->name }}">
       <div class="card-body">
-        <h5><strong>个人简介</strong></h5>
+        <h5><strong>Thông tin cá nhân</strong></h5>
         <p>{{ $user->introduction }}</p>
         <hr>
-        <h5><strong>注册于</strong></h5>
+        <h5><strong>Đăng ký tại</strong></h5>
         <p>{{ $user->created_at->diffForHumans() }}</p>
         <hr>
-        <h5><strong>最后活跃于</strong></h5>
+        <h5><strong>hoạt động lần cuối trong</strong></h5>
         <p>{{ $user->last_actived_at->diffForHumans() }}</p>
       </div>
     </div>
@@ -30,17 +30,17 @@
     </div>
     <hr>
 
-    {{-- 用户发布的内容 --}}
+    {{-- Nội dung người dùng đăng --}}
     <div class="card ">
       <div class="card-body">
         <ul class="nav nav-tabs">
           <li class="nav-item">
             <a class="nav-link bg-transparent {{ active_class(if_query('tab', null)) }}"
-              href="{{ route('users.show', $user->id) }}">Ta 的话题</a>
+              href="{{ route('users.show', $user->id) }}">Chủ đề </a>
           </li>
           <li class="nav-item">
             <a class="nav-link bg-transparent {{ active_class(if_query('tab', 'replies')) }}"
-              href="{{ route('users.show', [$user->id, 'tab' => 'replies']) }}">Ta 的回复</a>
+              href="{{ route('users.show', [$user->id, 'tab' => 'replies']) }}">Hồi đáp</a>
           </li>
         </ul>
 

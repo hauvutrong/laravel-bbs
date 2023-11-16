@@ -4,7 +4,7 @@
     <input type="hidden" name="topic_id" value="{{ $topic->id }}">
     <div class="form-group">
       <textarea class="form-control{{ $errors->has('content') ? ' is-invalid' : '' }}"
-                name="content" rows="3" placeholder="分享你的想法"></textarea>
+                name="content" rows="3" placeholder="chia sẻ những suy nghĩ của bạn"></textarea>
 
       @if ($errors->has('content'))
         <span class="invalid-feedback" role="alert">
@@ -13,7 +13,7 @@
       @endif
     </div>
     <button type="submit" class="btn btn-outline-primary">
-      <i class="fa fa-share"></i> 回复
+      <i class="fa fa-share"></i> Hồi đáp
     </button>
   </form>
 </div>

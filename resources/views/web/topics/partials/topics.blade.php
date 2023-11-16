@@ -28,7 +28,7 @@
             </a>
             <span>&nbsp;•&nbsp;</span>
             <i class="fa fa-clock"></i>
-            <span class="timeago" title="最后活跃于">{{ $topic->updated_at->diffForHumans() }}</span>
+            <span class="timeago" title="lasActive">{{ $topic->updated_at->diffForHumans() }}</span>
           </div>
         </div>
       </li>
@@ -39,5 +39,5 @@
     @endforeach
   </ul>
 @else
-  <div class="alert alert-warning" role="alert">暂无数据 ~_~</div>
+  <div class="alert alert-warning" role="alert">Không có dữ liệu ~_~</div>
 @endif

@@ -11,19 +11,19 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item {{ active_class(if_route('topics.index')) }}">
-          <a href="{{ route('topics.index') }}" class="nav-link">话题</a>
+          <a href="{{ route('topics.index') }}" class="nav-link">Đề tài</a>
         </li>
         <li class="nav-item {{ nav_active_class(1) }}">
-          <a href="{{ route('categories.show', 1) }}" class="nav-link">分享</a>
+          <a href="{{ route('categories.show', 1) }}" class="nav-link">Chia sẻ</a>
         </li>
         <li class="nav-item {{ nav_active_class(2) }}">
-          <a href="{{ route('categories.show', 2) }}" class="nav-link">教程</a>
+          <a href="{{ route('categories.show', 2) }}" class="nav-link">Giáo trình</a>
         </li>
         <li class="nav-item {{ nav_active_class(3) }}">
-          <a href="{{ route('categories.show', 3) }}" class="nav-link">对话</a>
+          <a href="{{ route('categories.show', 3) }}" class="nav-link">Hội thoại</a>
         </li>
         <li class="nav-item {{ nav_active_class(4) }}">
-          <a href="{{ route('categories.show', 4) }}" class="nav-link">公告</a>
+          <a href="{{ route('categories.show', 4) }}" class="nav-link">Thông báo</a>
         </li>
       </ul>
 
@@ -47,7 +47,7 @@
           @php
           $badge = Auth::user()->notification_count > 0 ? 'danger' : 'secondary';
           @endphp
-          <a href="{{ route('notifications.index') }}" title="消息提醒"
+          <a href="{{ route('notifications.index') }}" title="messageNotification"
             class="nav-link mr-3 font-weight-bold badge badge-pill badge-{{ $badge }} text-white">{{
             Auth::user()->notification_count }}</a>
         </li>
@@ -61,14 +61,14 @@
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             @hasrole('Administrator')
             <a class="dropdown-item" href="{{ route('admin.dashboard') }}">
-              <i class="fa fa-tachometer mr-2"></i> 管理后台
+              <i class="fa fa-tachometer mr-2"></i> Giao diện quản lí
             </a>
             @endhasrole
             <a class="dropdown-item" href="{{ route('users.show', Auth::id()) }}">
-              <i class="fa fa-user mr-2"></i> 个人中心
+              <i class="fa fa-user mr-2"></i> Trung tâm cá nhân
             </a>
             <a class="dropdown-item" href="{{ route('users.edit', Auth::id()) }}">
-              <i class="fa fa-edit mr-2"></i> 编辑资料
+              <i class="fa fa-edit mr-2"></i> Chỉnh sửa tài liệu (thông tin)
             </a>
             <div class="dropdown-divider"></div>
             <a id="logout" class="dropdown-item" href="#">
