@@ -51,7 +51,7 @@ class TopicsController extends WebController
 
         return redirect()
             ->to($topic->link())
-            ->with('success', "话题【{$title}】创建成功！");
+            ->with('success', "Chủ đề【{$title}】đã được tạo thành công!");
     }
 
     public function edit(Topic $topic)
@@ -79,7 +79,7 @@ class TopicsController extends WebController
 
         return redirect()
             ->to($topic->link())
-            ->with(['success' => "话题【{$title}】更新成功！"]);
+            ->with(['success' => "Chủ đề【{$title}】đã được cập nhật thành công!"]);
     }
 
     public function show(Request $request, Topic $topic)
@@ -100,7 +100,7 @@ class TopicsController extends WebController
         } catch (AuthorizationException $e) {
             return redirect()
                 ->route('topics.index')
-                ->with('warning', "你没有权限删除话题【{$title}】");
+                ->with('warning', "Bạn không có quyền xóa chủ đề【{$title}】");
         }
 
         try {
@@ -108,23 +108,23 @@ class TopicsController extends WebController
         } catch (\Exception $e) {
             return redirect()
                 ->route('topics.show')
-                ->with('danger', "话题【{$title}】删除失败！");
+                ->with('danger', "Xóa chủ đề【{$title}】không thành công!");
         }
 
         return redirect()
             ->route('topics.index')
-            ->with('success', "话题【{$title}】删除成功！");
+            ->with('success', "Chủ đề【{$title}】đã được xoá thành công");
     }
 
     public function upload(Request $request, ImageUploadHandler $uploader)
     {
-        $data = ['status' => false, 'msg' => '上传失败！', 'path' => ''];
+        $data = ['status' => false, 'msg' => 'upload failed!', 'path' => ''];
 
         /** @var \Illuminate\Http\UploadedFile $file */
         if ($file = $request->uploader) {
             $size = $file->getSize();
             if ($size > 1048576) {
-                $data['msg'] = '上传图片太大，请上传 2MB 以下的图片。';
+                $data['msg'] = 'Hình ảnh tải lên quá lớn, vui lòng tải lên hình ảnh dưới 2 MB.';
 
                 return $data;
             }

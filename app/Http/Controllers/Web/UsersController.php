@@ -55,6 +55,6 @@ class UsersController extends WebController
 
         return redirect()
             ->route('users.show', $user->id)
-            ->with('success', '个人资料更新成功。');
+            ->with('success', 'Hô sơ được cập nhật thành công.');
     }
 }
