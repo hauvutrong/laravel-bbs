@@ -37,9 +37,9 @@ class ImageCaptchaRequest extends FormRequest
     public function messages()
     {
         return [
-            'phone.required' => '手机号 不能为空。',
-            'phone.phone' => '手机号 格式不正确。',
-            'phone.unique' => '手机号 已经存在。',
+            'phone.required' => 'Số điện thoại di động không được để trống.',
+            'phone.phone' => 'Định dạng số điện thoại không chính xác.',
+            'phone.unique' => 'Số điện thoại di động đã tồn tại.',
         ];
     }
 }

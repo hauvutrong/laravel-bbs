@@ -31,8 +31,8 @@ class ReplyRequest extends FormRequest
     public function messages()
     {
         return [
-            'content.required' => '评论内容 不能为空。',
-            'content.min' => '评论内容 至少三个字符。',
+            'content.required' => 'Nội dung bình luận không được để trống.',
+            'content.min' => 'Nội dung bình luận phải có ít nhất ba ký tự.',
         ];
     }
 }

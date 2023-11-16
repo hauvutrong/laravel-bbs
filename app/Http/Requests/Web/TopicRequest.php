@@ -49,12 +49,12 @@ class TopicRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'title.min' => '标题 必须至少两个字符。',
-            'category_id.required' => '分类 必须选择。',
-            'category_id.numeric' => '分类 必须为数字。',
-            'body.required' => '内容 不能为空。',
-            'body.min' => '内容 必须至少三个字符。',
-            'body.max' => '内容 太长或者上传了超大图片（超大图片请裁剪后上传）。',
+            'title.min' => 'Chủ đề phải có ít nhất 2 ký tự.',
+            'category_id.required' => 'Danh mục bắt buộc.',
+            'category_id.numeric' => 'Danh mục phải là số.',
+            'body.required' => 'Nội dung không được để trống.',
+            'body.min' => 'Nội dung phải có ít nhất 3 ký tự.',
+            'body.max' => 'Nội dung quá dài hoặc hình ảnh quá khổ được tải lên (vui lòng cắt và tải lên hình ảnh quá khổ).',
         ];
     }
 }
