@@ -43,12 +43,12 @@ class UserRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'name.unique' => '用户名 已被占用，请重新填写。',
-            'name.regex' => '用户名 只支持英文、数字、中划线和下划线。',
-            'name.between' => '用户名 必须介于 3 - 25 个字符之间。',
-            'name.required' => '用户名 不能为空。',
-            'avatar.mimes' => '头像 必须是 jpeg, bmp, png, gif 格式的图片。',
-            'avatar.dimensions' => '头像 清晰度不够，宽和高需要 200px 以上。',
+            'name.unique' => 'Tên người dùng đã tồn tại, vui lòng điền lại.',
+            'name.regex' => 'Tên người dùng chỉ hỗ trợ tiếng Anh, số, dấu gạch dưới và dấu gạch dưới.',
+            'name.between' => 'Tên người dùng phải có từ 3 - 25 ký tự.',
+            'name.required' => 'Tên ngươi dung không được để trống.',
+            'avatar.mimes' => 'Hình đại diện phải là ảnh ở định dạng jpeg, bmp, png hoặc gif.',
+            'avatar.dimensions' => 'Hình đại diện không đủ rõ ràng và chiều rộng và chiều cao cần phải lớn hơn 200px.',
         ];
     }
 }

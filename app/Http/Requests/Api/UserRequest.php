@@ -52,10 +52,10 @@ class UserRequest extends FormRequest
     public function attributes()
     {
         return [
-            'sms_key' => '短信验证键',
-            'sms_code' => '短信验证码',
-            'introduction' => '个人简介',
-            'avatar_file_id' => '头像文件',
+            'sms_key' => 'Khóa xác minh SMS',
+            'sms_code' => 'Mã xác minh SMS',
+            'introduction' => 'Thông tin cá nhân',
+            'avatar_file_id' => 'Tập tin hình đại diện',
         ];
     }
 
@@ -67,10 +67,10 @@ class UserRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.require' => '用户名 已被占用，请重新填写。',
-            'name.regex' => '用户名 只支持英文、数字、中划线和下划线。',
-            'name.between' => '用户名 必须介于 3 - 25 个字符之间。',
-            'name.required' => '用户名 不能为空。',
+            'name.require' => 'Tên người dùng đã tồn tại, vui lòng điền lại.',
+            'name.regex' => 'Tên người dùng chỉ hỗ trợ tiếng Anh, số, dấu gạch dưới và dấu gạch dưới.',
+            'name.between' => 'Tên người dùng phải có từ 3 - 25 ký tự.',
+            'name.required' => 'Tên ngươi dung không được để trống.',
         ];
     }
 }

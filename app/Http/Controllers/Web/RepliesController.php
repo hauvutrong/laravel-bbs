@@ -28,7 +28,7 @@ class RepliesController extends Controller
 
         return redirect()
             ->to($reply->topic->link())
-            ->with('success', "话题评论【{$content}】创建成功！");
+            ->with('success', "Bình luận chủ đề【{$content}】đã được tạo thành công!");
     }
 
     public function destroy(Request $request, Reply $reply)
@@ -44,11 +44,11 @@ class RepliesController extends Controller
         } catch (\Exception $e) {
             return redirect()
                 ->to($reply->topic->link())
-                ->with('danger', "评论【{$name}】删除失败！");
+                ->with('danger', "Bình luận【{$name}】không thể xóa được!");
         }
 
         return redirect()
             ->to($reply->topic->link())
-            ->with('success', "评论【{$name}】删除成功！");
+            ->with('success', "Bình luận【{$name}】đã được xóa thành công!");
     }
 }

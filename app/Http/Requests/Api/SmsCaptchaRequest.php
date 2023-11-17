@@ -29,8 +29,8 @@ class SmsCaptchaRequest extends FormRequest
     public function messages()
     {
         return [
-            'captcha_key' => '图片验证键',
-            'captcha_code' => '图片验证码',
+            'captcha_key' => 'Khóa xác minh hình ảnh',
+            'captcha_code' => 'Mã xác minh hình ảnh',
         ];
     }
 }

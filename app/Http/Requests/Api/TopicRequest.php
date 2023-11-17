@@ -42,9 +42,9 @@ class TopicRequest extends FormRequest
     public function attributes()
     {
         return [
-            'title' => '话题标题',
-            'body' => '话题内容',
-            'category_id' => '话题分类',
+            'title' => 'Tên chủ đề',
+            'body' => 'Nội dung chủ đề',
+            'category_id' => 'Phân loại chủ đề',
         ];
     }
 
@@ -56,11 +56,11 @@ class TopicRequest extends FormRequest
     public function messages()
     {
         return [
-            'title.min' => '标题 必须至少两个字符。',
-            'body.required' => '内容 不能为空。',
-            'body.min' => '内容 必须至少三个字符。',
-            'body.max' => '内容 太长或者上传了超大图片（超大图片请裁剪后上传）。',
-            'category_id.required' => '分类 必须选择。',
+            'title.min' => 'Chủ đề phải có ít nhất hai ký tự.',
+            'body.required' => 'Nội dung không được để trống.',
+            'body.min' => 'Nội dung phải có ít nhất ba ký tự.',
+            'body.max' => 'Nội dung quá dài hoặc hình ảnh quá khổ được tải lên (vui lòng cắt và tải lên hình ảnh quá khổ).',
+            'category_id.required' => 'Danh mục bắt buộc.',
         ];
     }
 }
