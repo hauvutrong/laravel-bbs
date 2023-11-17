@@ -6,19 +6,19 @@
 
 @section('content')
 <div class="alert alert-warning" role="alert">
-  <span>欢迎使用 LaravelBBS 管理后台</span>
-  <a href="#">系统相关设置</a>
+  <span>Chào mừng bạn đến với nền tảng quản lý LaravelBBS</span>
+  <a href="#">Cài đặt hệ thống</a>
 </div>
 
 <div class="row">
   <div class="col-md-6">
     <div class="panel panel-default panel-150">
       <div class="panel-heading">
-        <h3 class="panel-title">站长公告</h3>
+        <h3 class="panel-title">Thông báo của quản trị viên</h3>
       </div>
       <div class="panel-body">
         <ul class="admin-notice-list">
-          <div class="empty">暂无公告</div>
+          <div class="empty">Chưa có thông báo nào</div>
         </ul>
       </div>
     </div>
@@ -26,12 +26,12 @@
   <div class="col-md-6">
     <div class="panel panel-default panel-150">
       <div class="panel-heading">
-        <h3 class="panel-title">状态栏</h3>
+        <h3 class="panel-title">Thanh trạng thái</h3>
       </div>
       <div class="panel-body" id="system-status" data-url="#">
         <ul class="subfield-list four-subfield clearfix">
           <li>
-            <div class="title">系统版本</div>
+            <div class="title">Phiên bản hệ thống</div>
             <div class="info">
               <span class="glyphicon glyphicon-ok-sign text-success"></span>
               <span class="text-lg">v0.0.1</span>
@@ -41,7 +41,7 @@
             <div class="title">Unknown</div>
             <div class="info">
               <span class="glyphicon glyphicon-ok-sign text-success"></span>
-              <span class="text-lg">已更新</span>
+              <span class="text-lg">Đã cập nhật</span>
             </div>
           </li>
           <li>
@@ -49,30 +49,30 @@
             <div class="info">
               <span class="status-card-warp">
                 <span class="glyphicon glyphicon-exclamation-sign text-danger"></span>
-                <a class="text-lg link-underline text-danger" href="#"> 未开启</a>
+                <a class="text-lg link-underline text-danger" href="#"> Chưa mở</a>
                 <div class="status-card">
                   <ul class="open-serve-list">
                     <li>
                       <span class="key">1</span>
-                      <a href="#" class="value value-danger"><i class="dot"></i>未开启</a>
+                      <a href="#" class="value value-danger"><i class="dot"></i>Chưa mở</a>
                     </li>
                     <li>
                       <span class="key">云文档</span>
-                      <a href="#" class="value value-danger"><i class="dot"></i>未开启</a>
+                      <a href="#" class="value value-danger"><i class="dot"></i>Chưa mở</a>
                     </li>
                     <li>
                       <span class="key">云直播</span>
-                      <a href="#" class="value value-danger"><i class="dot"></i>未开启</a>
+                      <a href="#" class="value value-danger"><i class="dot"></i>Chưa mở</a>
                     </li>
                     <li>
                       <span class="key">云短信</span>
-                      <a href="#" class="value value-danger"><i class="dot"></i>未开启</a>
+                      <a href="#" class="value value-danger"><i class="dot"></i>Chưa mở</a>
                     </li>
                     <li>
                       <span class="key">云搜索</span>
-                      <a href="#" class="value value-danger"><i class="dot"></i>未开启</a>
+                      <a href="#" class="value value-danger"><i class="dot"></i>Chưa mở</a>
                     </li>
-                    <li><span class="key">云问答</span><a href="#" class="value value-danger"><i class="dot"></i>未开启</a>
+                    <li><span class="key">云问答</span><a href="#" class="value value-danger"><i class="dot"></i>Chưa mở</a>
                     </li>
                   </ul>
                 </div>
@@ -83,7 +83,7 @@
             <div class="title">Unknown</div>
             <div class="info">
               <span class="glyphicon glyphicon-exclamation-sign text-danger"></span>
-              <a href="#" class="text-lg link-underline text-danger"> 未开启</a>
+              <a href="#" class="text-lg link-underline text-danger"> Chưa mở</a>
             </div>
           </li>
         </ul>
@@ -95,33 +95,33 @@
 <div class="panel panel-default">
   <div class="panel-heading clearfix">
     <h3 class="panel-title">
-      今日数据
+      Dữ liệu ngày nay
       <span data-toggle="popover" class="glyphicon glyphicon-question-sign color-gray text-sm js-today-data-popover"
         data-original-title="" title=""></span>
       <div class="popover-content hidden">
         <div class="popover-item">
-          <div class="title">登录用户</div>
-          <div class="content">15分钟内活动的登录用户</div>
+          <div class="title">Người dùng đăng nhập</div>
+          <div class="content">Người dùng đăng nhập hoạt động trong vòng 15 phút</div>
         </div>
         <div class="popover-item">
-          <div class="title">在线总数</div>
-          <div class="content">15分钟内活动用户数，包括登录用户及未登录用户</div>
+          <div class="title">Tổng số trực tuyến</div>
+          <div class="content">Số lượng người dùng hoạt động trong vòng 15 phút, bao gồm cả người dùng đã đăng nhập và người dùng chưa đăng nhập</div>
         </div>
         <div class="popover-item">
-          <div class="title">新增注册</div>
-          <div class="content">平台新增用户数，包括自主注册、第三方注册及导入</div>
+          <div class="title">Đăng kí mới</div>
+          <div class="content">Số lượng người dùng mới trên nền tảng, bao gồm tự đăng ký, đăng ký và nhập của bên thứ ba</div>
         </div>
         <div class="popover-item">
-          <div class="title">新增话题</div>
-          <div class="content">今日发布话题数</div>
+          <div class="title">Thêm chủ đề</div>
+          <div class="content">Số chủ đề được đăng hôm nay</div>
         </div>
         <div class="popover-item">
-          <div class="title">新增回复</div>
-          <div class="content">今日发表回复数</div>
+          <div class="title">Thêm phản hồi</div>
+          <div class="content">Số lượng câu trả lời được đăng ngày hôm nay</div>
         </div>
         <div class="popover-item">
-          <div class="title">未回复总数</div>
-          <div class="content">到目前为止，未回答问题总数</div>
+          <div class="title">Tổng số câu trả lời chưa được trả lời</div>
+          <div class="content">Tổng số câu hỏi chưa được trả lời cho đến nay</div>
         </div>
       </div>
     </h3>
@@ -129,29 +129,29 @@
   <div class="panel-body" id="site-overview-table" data-url="#">
     <ul class="subfield-list five-subfield clearfix">
       <li>
-        <div class="title">登录用户</div>
+        <div class="title">Người dùng đăng nhập</div>
         <span class="number"><a href="#" target="_blank">0</a></span>
-        <p>在线总数: <a href="#" target="_blank">0</a></p>
+        <p>Tổng số trực tuyến: <a href="#" target="_blank">0</a></p>
       </li>
       <li>
-        <div class="title">新增注册</div>
+        <div class="title">Đăng kí mới</div>
         <span class="number">1</span>
-        <p>总数: 1</p>
+        <p>Tổng cộng: 1</p>
       </li>
       <li>
-        <div class="title">新增话题</div>
+        <div class="title">Thêm chủ đề</div>
         <span class="number"> 0</span>
-        <p>总人次: 0</p>
+        <p>Tổng số du khách: 0</p>
       </li>
       <li>
-        <div class="title">新增回复</div>
+        <div class="title">Thêm phản hồi</div>
         <span class="number"> 0</span>
-        <p>总人次: 0</p>
+        <p>Tổng số du khách: 0</p>
       </li>
       <li>
-        <div class="title">未回复话题</div>
+        <div class="title">Không có câu trả lời cho chủ đề</div>
         <span class="number">0</span>
-        <p>总数: 0</p>
+        <p>Tổng cộng: 0</p>
       </li>
     </ul>
   </div>
@@ -171,22 +171,22 @@
   <div class="col-md-4">
     <div class="panel panel-default panel-420">
       <div class="panel-heading">
-        <a href="#" class="pull-right">更多</a>
-        <h3 class="panel-title">最新评价</h3>
+        <a href="#" class="pull-right">Hơn</a>
+        <h3 class="panel-title">Những đánh giá gần đây</h3>
       </div>
       <div class="panel-body">
         <table class="table table-condensed table-noborder table-overflow">
           <thead>
             <tr>
-              <th width="63%">评价内容</th>
-              <th width="15%">评分</th>
-              <th width="22%">操作</th>
+              <th width="63%">Nội dung bình luận</th>
+              <th width="15%">Điểm</th>
+              <th width="22%">Vận hành</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>
-                <div class="empty">暂无评价</div>
+                <div class="empty">Chưa có bình luận nào</div>
               </td>
             </tr>
           </tbody>
@@ -198,13 +198,13 @@
     <div class="panel panel-default search-panel panel-420">
       <div class="panel-heading">
         <h3 class="panel-title">
-          热门搜索
-          <small>最近7天</small>
+        Tìm kiếm phổ biến
+          <small>7 ngày qua</small>
         </h3>
       </div>
       <div class="panel-body">
         <div class="empty">
-          <a target="_blank" href="#">热门搜索关键词</a>
+          <a target="_blank" href="#">Từ khóa tìm kiếm phổ biến</a>
         </div>
       </div>
     </div>

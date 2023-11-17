@@ -4,7 +4,7 @@
   $action = str_after(current_action(), '@');
 @endphp
 
-@section('title', $action === 'show' ? '查看权限' : ($permission->id ? '编辑权限' : '添加权限'))
+@section('title', $action === 'show' ? 'Xem quyền' : ($permission->id ? 'Chỉnh sửa quyền' : 'Thêm quyền'))
 
 @section('content')
   <form class="form-horizontal" id="permission-form"
@@ -15,7 +15,7 @@
 
     <div class="row form-group">
       <div class="col-md-2 control-label">
-        <label for="name">角色名称</label>
+        <label for="name">Tên vai trò</label>
       </div>
       <div class="col-md-7 controls">
         <input type="text" class="form-control" id="name" name="name"
@@ -28,7 +28,7 @@
 
     <div class="row form-group">
       <div class="col-md-2 control-label">
-        <label for="signature">角色编码</label>
+        <label for="signature">Mã hóa vai trò</label>
       </div>
       <div class="col-md-7 controls">
         <input type="text" class="form-control" id="slug" name="slug"
@@ -45,10 +45,10 @@
   @if ($action !== 'show')
     <button class="btn btn-primary pull-right" id="role-btn" type="submit"
             data-submiting-text="正在提交..." data-toggle="form-submit"
-            data-target="#role-form">保存
+            data-target="#role-form">Giữ
     </button>
   @endif
-  <button type="button" class="btn btn-link pull-right" data-dismiss="modal">取消</button>
+  <button type="button" class="btn btn-link pull-right" data-dismiss="modal">Hủy bỏ</button>
 @stop
 
 @section('script')

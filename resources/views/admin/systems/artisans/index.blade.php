@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 
-@section('title', '系统管理')
+@section('title', 'Quản lý hệ thống')
 
 @section('sidebar')
   @php($sidebar = 'system')
@@ -15,7 +15,7 @@
   @if ($outputs)
     <div id="artisan-output">
 <pre>
-<i class="fa fa-times close-output"> 清除输出</i>
+<i class="fa fa-times close-output"> Đầu ra rõ ràng</i>
 <span class="text-success">Artisan Command Output:</span>
 {{ trim(trim($outputs), '"') }}
 </pre>
@@ -37,8 +37,8 @@
                 action="{{ route('admin.systems.artisans.output') }}">
             @csrf
             <div class="form-group">
-              <input type="text" class="form-control" name="args" id="args" placeholder="请输入命令参数">
-              <input type="submit" class="btn btn-primary" value="运行命令">
+              <input type="text" class="form-control" name="args" id="args" placeholder="Vui lòng nhập tham số lệnh">
+              <input type="submit" class="btn btn-primary" value="Chạy lệnh">
             </div>
             <input type="hidden" name="name" id="name" value="{{ $command->name }}">
           </form>

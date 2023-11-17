@@ -1,6 +1,6 @@
 @extends('admin.layouts.modal')
 
-@section('title', $link->id ? '编辑友情链接' : '添加友情链接'))
+@section('title', $link->id ? 'Chỉnh sửa liên kết thân thiện' : 'Thêm liên kết thân thiện'))
 
 @section('content')
   <form class="form-horizontal" id="navigation-form" method="post"
@@ -10,7 +10,7 @@
     @method($link->id ? 'PATCH' : 'POST')
 
     <div class="row form-group">
-      <div class="col-md-3 control-label"><label for="name">链接名称</label></div>
+      <div class="col-md-3 control-label"><label for="name">Tên liên kết</label></div>
       <div class="col-md-8 controls">
         <input class="form-control" type="text" id="name" name="name" value="{{ old('name', $link->name) }}"
                data-explain="">
@@ -19,7 +19,7 @@
     </div>
 
     <div class="row form-group">
-      <div class="col-md-3 control-label"><label for="href">链接地址</label></div>
+      <div class="col-md-3 control-label"><label for="href">Địa chỉ liên kết</label></div>
       <div class="col-md-8 controls">
         <input class="form-control" type="text" id="href" name="href" value="{{ old('href', $link->href) }}"
                placeholder="http://">
@@ -27,27 +27,27 @@
     </div>
 
     <div class="row form-group">
-      <div class="col-md-3 control-label"><label>新开窗口</label></div>
+      <div class="col-md-3 control-label"><label>Mở cửa sổ mới</label></div>
       <div class="col-md-8 controls radios">
         <div id="isNewWin">
           <input type="radio" name="isNewWin" value="0" checked="checked">
-          <label>否</label>
+          <label>KHÔNG</label>
           <input type="radio" name="isNewWin" value="1">
-          <label>是</label>
+          <label>Đúng</label>
         </div>
       </div>
     </div>
 
     <div class="row form-group">
       <div class="col-md-3 control-label">
-        <label>状态</label>
+        <label>Tình trạng</label>
       </div>
       <div class="col-md-8 controls radios">
         <div id="isOpen">
           <input type="radio" name="isOpen" value="1" checked="checked">
-          <label>开启</label>
+          <label>Bật</label>
           <input type="radio" name="isOpen" value="0">
-          <label>禁用</label>
+          <label>Vô hiệu hóa</label>
         </div>
       </div>
     </div>
@@ -56,9 +56,9 @@
 @stop
 
 @section('footer')
-  <button type="button" class="btn btn-link" data-dismiss="modal">取消</button>
+  <button type="button" class="btn btn-link" data-dismiss="modal">Hủy bỏ</button>
   <button id="navigation-save-btn" data-submiting-text="正在提交..." type="submit" class="btn btn-primary"
-          data-toggle="form-submit" data-target="#navigation-form">保存
+          data-toggle="form-submit" data-target="#navigation-form">Giữ
   </button>
 @stop
 

@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 
-@section('title', '用户设置')
+@section('title', 'Thiết lập người dùng')
 
 @section('sidebar')
   @php($sidebar = 'system')
@@ -11,20 +11,20 @@
         data-save-url="{{ route('admin.systems.users.register') }}">
 
     <fieldset>
-      <legend>注册设置</legend>
+      <legend>Cài đặt đăng ký</legend>
       <div class="form-group">
         <div class="col-md-3 control-label">
-          <label>用户注册模式</label>
+          <label>Chế độ đăng ký người dùng</label>
         </div>
         <div class="controls col-md-8">
           <div class="btn-group">
-            <button type="button" class="btn btn-default model btn-primary" data-modle="email">邮箱注册</button>
-            <button type="button" class="btn btn-default  model" data-modle="mobile">手机注册</button>
-            <button type="button" class="btn btn-default  model" data-modle="email_or_mobile">邮箱或手机注册</button>
-            <button type="button" class="btn btn-default  model" data-modle="closed">关闭</button>
+            <button type="button" class="btn btn-default model btn-primary" data-modle="email">Đăng ky email</button>
+            <button type="button" class="btn btn-default  model" data-modle="mobile">Đăng ký điện thoại của bạn</button>
+            <button type="button" class="btn btn-default  model" data-modle="email_or_mobile">Đăng ký qua email hoặc điện thoại di động</button>
+            <button type="button" class="btn btn-default  model" data-modle="closed">Khép kín</button>
           </div>
           <input type="hidden" value="email" name="register_mode">
-          <div class="help-block">开启云短信后，才可使用“手机注册”或“邮箱或手机注册”</div>
+          <div class="help-block">Chỉ sau khi bật SMS trên đám mây, bạn mới có thể sử dụng "Đăng ký điện thoại di động" hoặc "Đăng ký email hoặc điện thoại di động"</div>
         </div>
       </div>
 
@@ -32,20 +32,20 @@
       <div class="email-content">
         <div class="form-group">
           <div class="col-md-3 control-label">
-            <label>邮箱验证登录</label>
+            <label>Đăng nhập xác minh email</label>
           </div>
           <div class="controls col-md-8 radios">
             <label><input type="radio" name="email_enabled" value="opened" data-widget-cid="widget-2"
-                          data-explain="开启后,邮箱未验证的用户将无法登录,请先保证邮件服务器已设置"> 开启</label>
+                          data-explain="Sau khi bật, người dùng có địa chỉ email chưa được xác minh sẽ không thể đăng nhập. Hãy đảm bảo rằng máy chủ email đã được thiết lập trước."> Bật</label>
             <label><input type="radio" name="email_enabled" value="closed" checked="checked"
-                          data-explain="开启后,邮箱未验证的用户将无法登录,请先保证邮件服务器已设置">关闭</label>
+                          data-explain="Sau khi bật, người dùng có địa chỉ email chưa được xác minh sẽ không thể đăng nhập. Hãy đảm bảo rằng máy chủ email đã được thiết lập trước.">Khép kín</label>
             <button type="button" class="btn btn-primary btn-sm js-email-send-check hidden"
-                    data-url="">检测邮箱服务
+                    data-url="">Kiểm tra dịch vụ email
             </button>
             <div class="alert alert-info js-email-status hidden" data-url="/app.php/admin/setting/mailer" role="alert"
-                 style="padding: 5px;margin-bottom: 0">正在检测.....
+                 style="padding: 5px;margin-bottom: 0">Phát hiện.....
             </div>
-            <div class="help-block">开启后,邮箱未验证的用户将无法登录,请先保证邮件服务器已设置</div>
+            <div class="help-block">Sau khi bật, người dùng có địa chỉ email chưa được xác minh sẽ không thể đăng nhập. Hãy đảm bảo rằng máy chủ email đã được thiết lập trước.</div>
           </div>
         </div>
 
@@ -53,7 +53,7 @@
 
         <div class="form-group">
           <div class="col-md-3 control-label">
-            <label for="email_activation_title">新用户激活邮件标题</label>
+            <label for="email_activation_title">Tiêu đề email kích hoạt người dùng mới</label>
           </div>
           <div class="controls col-md-8">
             <input type="text" id="email_activation_title" name="email_activation_title" class="form-control"
@@ -64,17 +64,17 @@
 
         <div class="form-group">
           <div class="col-md-3 control-label">
-            <label for="email_activation_body">新用户激活邮件内容</label>
+            <label for="email_activation_body">Nội dung email kích hoạt người dùng mới</label>
           </div>
           <div class="controls col-md-8">
             <textarea id="email_activation_body" name="email_activation_body" class="form-control" rows="5"></textarea>
             <div class="help-block">
-              <div>变量说明：</div>
+              <div>Mô tả biến:</div>
               <ul>
-                <li>为接收方用户昵称</li>
-                <li>为网站名称</li>
-                <li>为网站的地址</li>
-                <li>为邮箱验证地址</li>
+                <li>Biệt hiệu cho người dùng người nhận</li>
+                <li>Cho tên trang web</li>
+                <li>Là địa chỉ của trang web</li>
+                <li>Xác minh địa chỉ cho email</li>
               </ul>
             </div>
           </div>
@@ -83,21 +83,21 @@
 
       <div class="form-group">
         <div class="col-md-3 control-label">
-          <label>注册防护机制</label>
+          <label>Cơ chế bảo vệ đăng ký</label>
         </div>
 
         <div class="controls col-md-8 radios">
           <label>
-            <input type="radio" name="register_protective" id="none" value="none" checked="checked"> 无
+            <input type="radio" name="register_protective" id="none" value="none" checked="checked"> Không có
           </label>
           <label>
-            <input type="radio" name="register_protective" id="low" value="low"> 低
+            <input type="radio" name="register_protective" id="low" value="low"> Thấp
           </label>
           <label>
-            <input type="radio" name="register_protective" id="middle" value="middle"> 中
+            <input type="radio" name="register_protective" id="middle" value="middle"> Ở giữa
           </label>
           <label>
-            <input type="radio" name="register_protective" id="high" value="high"> 高
+            <input type="radio" name="register_protective" id="high" value="high"> Cao
           </label>
         </div>
 
@@ -106,40 +106,40 @@
         <div class="controls col-md-8 mtl col-md-offset-3 dync_visible not_closed_mode low_protective"
              style="display:none;">
           <div class="well">
-            方案说明：
+          Mô tả kế hoạch:
             <p class="mll mtm dync_visible low_protective_email low_protective_email_or_mobile" style="display: none;">
-              邮箱注册时须要完成安全验证。</p>
+            Xác minh bảo mật cần phải được hoàn thành khi đăng ký qua email.</p>
             <p class="mll mtm dync_visible low_protective_mobile low_protective_email_or_mobile" style="display: none;">
-              手机注册首次获取短信验证码时无安全验证。</p>
+            Không có xác minh bảo mật khi đăng ký qua điện thoại di động để nhận mã xác minh SMS lần đầu tiên.</p>
             <p class="mll mtm dync_visible low_protective_mobile low_protective_email_or_mobile" style="display: none;">
-              60分钟内，同一IP地址第二次获取短信验证码时，须要完成安全验证。</p>
+            Trong vòng 60 phút, khi cùng một địa chỉ IP nhận được mã xác minh SMS lần thứ hai, việc xác minh bảo mật cần được hoàn tất.</p>
           </div>
         </div>
 
         <div class="controls col-md-8 mtl col-md-offset-3 dync_visible not_closed_mode middle_protective"
              style="display:none;">
           <div class="well">
-            方案说明：
+          Mô tả kế hoạch:
             <p class="mll mtm dync_visible middle_protective_email middle_protective_email_or_mobile"
-               style="display: none;">邮箱注册时须要完成安全验证。</p>
+               style="display: none;">Xác minh bảo mật cần phải được hoàn thành khi đăng ký qua email.</p>
             <p class="mll mtm dync_visible middle_protective_mobile middle_protective_email_or_mobile"
-               style="display: none;">手机注册首次获取短信验证码时无安全验证。</p>
+               style="display: none;">Không có xác minh bảo mật khi đăng ký qua điện thoại di động để nhận mã xác minh SMS lần đầu tiên.</p>
             <p class="mll mtm dync_visible middle_protective_mobile middle_protective_email_or_mobile"
-               style="display: none;">60分钟内，同一IP地址第二次获取短信验证码时，须要完成安全验证。</p>
-            <p class="mll mtm">同一IP24小时內只能注册30次。</p>
+               style="display: none;">Trong vòng 60 phút, khi cùng một địa chỉ IP nhận được mã xác minh SMS lần thứ hai, việc xác minh bảo mật cần được hoàn tất.</p>
+            <p class="mll mtm">Cùng một IP chỉ có thể được đăng ký 30 lần trong vòng 24 giờ.</p>
           </div>
         </div>
 
         <div class="controls col-md-8 mtl col-md-offset-3 dync_visible not_closed_mode high_protective"
              style="display:none;">
           <div class="well">
-            方案说明：
+          Mô tả kế hoạch:
             <p class="mll mtm dync_visible high_protective_email high_protective_email_or_mobile"
-               style="display: none;">邮箱注册时须要完成安全验证。</p>
+               style="display: none;">Xác minh bảo mật cần phải được hoàn thành khi đăng ký qua email.</p>
             <p class="mll mtm dync_visible high_protective_mobile high_protective_email_or_mobile"
-               style="display: none;">手机注册获取短信验证码时须要完成安全验证。</p>
-            <p class="mll mtm">同一IP24小时內只能注册10次。</p>
-            <p class="mll mtm">同一IP1小时內只能注册1个帐号。</p>
+               style="display: none;">Bạn cần hoàn tất xác minh bảo mật khi đăng ký bằng điện thoại di động của mình để nhận mã xác minh SMS.</p>
+            <p class="mll mtm">Cùng một IP chỉ có thể được đăng ký 10 lần trong vòng 24 giờ.</p>
+            <p class="mll mtm">Chỉ một tài khoản có thể được đăng ký với cùng một IP trong vòng một giờ.</p>
           </div>
         </div>
       </div>
@@ -147,42 +147,42 @@
     </fieldset>
 
     <fieldset>
-      <legend>欢迎信息设置</legend>
+      <legend>Cài đặt tin nhắn chào mừng</legend>
       <div class="form-group" style="display:none;">
         <div class="col-md-3 control-label">
-          <label>发送欢迎信息</label>
+          <label>Gửi tin nhắn chào mừng</label>
         </div>
         <div class="controls col-md-8 checkboxs">
-          <label><input type="checkbox" name="welcome_methods[]" value="message"> 站内私信</label><label><input
-              type="checkbox" name="welcome_methods[]" value="email"> 电子邮件</label>
-          <div class="help-block">新用户邮件激活开启时，电子邮件的发送欢迎信息方式无效。</div>
+          <label><input type="checkbox" name="welcome_methods[]" value="message"> Tin nhắn riêng tư trên trang web</label><label><input
+              type="checkbox" name="welcome_methods[]" value="email"> e-mail</label>
+          <div class="help-block">Khi kích hoạt email cho người dùng mới, phương thức gửi tin nhắn chào mừng qua email không hợp lệ.</div>
         </div>
       </div>
 
       <div class="form-group">
         <div class="col-md-3 control-label">
-          <label for="welcome_title">发送欢迎信息</label>
+          <label for="welcome_title">Gửi tin nhắn chào mừng</label>
         </div>
         <div class="controls col-md-8 radios">
-          <label><input type="radio" name="welcome_enabled" value="opened" checked="checked"> 开启</label><label><input
-              type="radio" name="welcome_enabled" value="closed"> 关闭</label>
-          <div class="help-block">欢迎信以站内私信的方式，发送给新用户。</div>
+          <label><input type="radio" name="welcome_enabled" value="opened" checked="checked"> Bật</label><label><input
+              type="radio" name="welcome_enabled" value="closed"> Khép kín</label>
+          <div class="help-block">Thư chào mừng được gửi tới người dùng mới dưới dạng tin nhắn riêng tư trong trang web.</div>
         </div>
       </div>
 
       <div class="form-group">
         <div class="col-md-3 control-label">
-          <label for="welcome_sender">欢迎信息发送方</label>
+          <label for="welcome_sender">Người gửi tin nhắn chào mừng</label>
         </div>
         <div class="controls col-md-8">
           <input type="text" id="welcome_sender" name="welcome_sender" class="form-control" value="测试管理员">
-          <div class="help-block">通常为这个网站的管理员，请输入用户用户名。</div>
+          <div class="help-block">Điển hình là quản trị viên của trang này vui lòng nhập tên người dùng.</div>
         </div>
       </div>
 
       <div class="form-group">
         <div class="col-md-3 control-label">
-          <label for="welcome_title">欢迎信息标题</label>
+          <label for="welcome_title">Tiêu đề tin nhắn chào mừng</label>
         </div>
         <div class="controls col-md-8">
           <input type="text" id="welcome_title" name="welcome_title" class="form-control" value="">
@@ -191,18 +191,18 @@
 
       <div class="form-group">
         <div class="col-md-3 control-label">
-          <label for="welcome_body">欢迎信息内容</label>
+          <label for="welcome_body">Nội dung tin nhắn chào mừng</label>
         </div>
         <div class="controls col-md-8">
           <textarea id="welcome_body" name="welcome_body" class="form-control" rows="5">
           </textarea>
           <div class="help-block">
-            <div>注意： 私信长度不能超过1000个字符</div>
-            <div>变量说明：</div>
+            <div>Lưu ý: Độ dài tin nhắn riêng không được vượt quá 1000 ký tự/div>
+            <div>Mô tả biến:</div>
             <ul>
-              <li> 为接收方用户用户名</li>
-              <li>sitename 为网站名称</li>
-              <li>siteurl 为网站的地址</li>
+              <li> Tên người dùng cho người dùng người nhận</li>
+              <li>sitename là tên trang web</li>
+              <li>siteurl là địa chỉ của trang web</li>
             </ul>
           </div>
         </div>
@@ -210,21 +210,21 @@
     </fieldset>
 
     <fieldset>
-      <legend>服务条款设置</legend>
+      <legend>Cài đặt điều khoản dịch vụ</legend>
       <div class="form-group">
         <div class="col-md-3 control-label">
-          <label for="user_terms">是否开启服务条款</label>
+          <label for="user_terms">Có bật điều khoản dịch vụ hay không</label>
         </div>
         <div class="controls col-md-8 radios">
-          <label><input type="radio" name="user_terms" value="opened"> 开启</label>
-          <label><input type="radio" name="user_terms" value="closed" checked="checked">关闭</label>
-          <div class="help-block">开启后用户注册时必须同意条款才能注册</div>
+          <label><input type="radio" name="user_terms" value="opened"> Bật</label>
+          <label><input type="radio" name="user_terms" value="closed" checked="checked">Khép kín</label>
+          <div class="help-block">Sau khi bật lên, người dùng phải đồng ý với các điều khoản trước khi đăng ký.</div>
         </div>
       </div>
 
       <div class="form-group">
         <div class="col-md-3 control-label">
-          <label for="user_terms_body">条款内容</label>
+          <label for="user_terms_body">Các điều khoản và điều kiện</label>
         </div>
         <div class="controls col-md-8">
           <textarea class="form-control" id="user_terms_body" rows="16" name="user_terms_body"
@@ -237,7 +237,7 @@
     <div class="form-group">
       <div class="col-md-3 control-label"></div>
       <div class="controls col-md-8">
-        <button type="submit" class="btn btn-primary">提交</button>
+        <button type="submit" class="btn btn-primary">Nộp</button>
       </div>
     </div>
   </form>

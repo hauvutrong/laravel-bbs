@@ -24,7 +24,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="{{ route('admin.dashboard') }}">LaravelBBS-管理后台</a>
+        <a class="navbar-brand" href="{{ route('admin.dashboard') }}">Phần phụ trợ quản lý LaravelBBS</a>
       </div>
       <div class="navbar-collapse collapse">
         @yield('sidebar')
@@ -88,7 +88,7 @@
   <div class="fixed-bar">
     <a href="#" target='_blank' class="icon-question-text feedback">
       <i class="es-icon es-icon-help"></i>
-      <span>产品<br />反馈</span>
+      <span>Sản phẩm<br />Nhận xét</span>
     </a>
   </div>
 </body>

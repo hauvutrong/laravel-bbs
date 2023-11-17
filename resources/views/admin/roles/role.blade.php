@@ -1,7 +1,7 @@
 @extends('admin.layouts.modal')
 
 @php($action = \Illuminate\Support\Str::after(current_action(), '@'))
-@section('title', $action === 'show' ? '查看角色' : ($role->id ? '编辑角色' : '添加角色'))
+@section('title', $action === 'show' ? 'Xem vai trò' : ($role->id ? 'Chỉnh sửa vai trò' : 'Thêm vai trò'))
 
 @section('action')
 @stop
@@ -15,7 +15,7 @@
 
   <div class="row form-group">
     <div class="col-md-2 control-label">
-      <label for="name">角色名称</label>
+      <label for="name">Tên vai trò</label>
     </div>
     <div class="col-md-7 controls">
       <input type="text" class="form-control" id="name" name="name" value="{{ old('name', $role->name) }}"
@@ -26,7 +26,7 @@
 
   <div class="row form-group">
     <div class="col-md-2 control-label">
-      <label for="signature">角色编码</label>
+      <label for="signature">Mã hóa vai trò</label>
     </div>
     <div class="col-md-7 controls">
       <input type="text" class="form-control" id="slug" name="slug" value="{{ old('slug', $role->slug) }}"
@@ -37,7 +37,7 @@
 
   <div class="row form-group">
     <div class="col-md-2 control-label">
-      <label>权限</label>
+      <label>Quyền</label>
     </div>
     <div class="col-md-7 controls">
       <ul class="ztree" id="tree">
@@ -52,11 +52,11 @@
 
 @section('footer')
 @if ($action !== 'show')
-<button class="btn btn-primary pull-right" id="role-btn" type="submit" data-submiting-text="正在提交..."
-  data-toggle="form-submit" data-target="#role-form">保存
+<button class="btn btn-primary pull-right" id="role-btn" type="submit" data-submiting-text="Đang gửi..."
+  data-toggle="form-submit" data-target="#role-form">Giữ
 </button>
 @endif
-<button type="button" class="btn btn-link pull-right" data-dismiss="modal">取消</button>
+<button type="button" class="btn btn-link pull-right" data-dismiss="modal">Hủy bỏ</button>
 @stop
 
 @section('script')

@@ -1,14 +1,14 @@
 @extends('admin.layouts.modal')
 
-@section('title', '查看用户个人简介')
+@section('title', 'Xem hồ sơ người dùng')
 
 @section('content')
   <table class="table table-striped table-condenseda table-bordered">
     <tbody>
     <tr>
-      <th width="25%">用户名</th>
+      <th width="25%">Tên tài khoản</th>
       <td width="75%">
-        <a class="pull-right" href="{{ route('users.show', $user->id) }}" target="_blank">个人主页</a>
+        <a class="pull-right" href="{{ route('users.show', $user->id) }}" target="_blank">Trang chủ</a>
         {{ $user->name }}
       </td>
     </tr>
@@ -17,60 +17,60 @@
       <td>{{ $user->email }}</td>
     </tr>
     <tr>
-      <th>用户组</th>
-      <td>站长&nbsp;维护者&nbsp;用户</td>
+      <th>Nhóm người dùng</th>
+      <td>Quản trị trang web&nbsp;Người bảo trì&nbsp;Người dùng</td>
     </tr>
     <tr>
-      <th>注册时间/IP</th>
-      <td>{{ $user->created_at->diffForHumans() }} / 127.0.0.1 本地地址</td>
+      <th>Thời gian đăng ký/IP</th>
+      <td>{{ $user->created_at->diffForHumans() }} / 127.0.0.1 địa chỉ địa phương</td>
     </tr>
     <tr>
-      <th>最近登录时间/IP</th>
-      <td>2019-3-15 10:38:59 / 192.168.33.1 局域网</td>
+      <th>Lần đăng nhập cuối cùng/IP</th>
+      <td>2019-3-15 10:38:59 / 192.168.33.1 mạng lưới khu vực địa phương</td>
     </tr>
     <tr>
-      <th>姓名</th>
+      <th>Tên</th>
       <td>{{ $user->name }}</td>
     </tr>
     <tr>
-      <th>性别</th>
-      <td>秘密</td>
+      <th>Giới tính</th>
+      <td>Bí mật</td>
     </tr>
     <tr>
-      <th>手机号码</th>
-      <td>暂无</td>
+      <th>số điện thoại</th>
+      <td>Chưa có</td>
     </tr>
     <tr>
-      <th>职业</th>
-      <td>暂无</td>
+      <th>Nghề nghiệp</th>
+      <td>Chưa có</td>
     </tr>
     <tr>
-      <th>头衔</th>
-      <td>暂无</td>
+      <th>Tiêu đề</th>
+      <td>Chưa có</td>
     </tr>
     <tr>
-      <th>个人签名</th>
-      <td>暂无</td>
+      <th>Chữ ký cá nhân</th>
+      <td>Chưa có</td>
     </tr>
     <tr>
-      <th>自我介绍</th>
-      <td>暂无</td>
+      <th>Tự giới thiệu</th>
+      <td>Chưa có</td>
     </tr>
     <tr>
-      <th>个人网站</th>
-      <td>暂无</td>
+      <th>Trang web cá nhân</th>
+      <td>Chưa có</td>
     </tr>
     <tr>
-      <th>微博</th>
-      <td>暂无</td>
+      <th>Weibo</th>
+      <td>Chưa có</td>
     </tr>
     <tr>
-      <th>微信</th>
-      <td>暂无</td>
+      <th>WeChat</th>
+      <td>Chưa có</td>
     </tr>
     <tr>
       <th>QQ</th>
-      <td>暂无</td>
+      <td>Chưa có</td>
     </tr>
     </tbody>
   </table>

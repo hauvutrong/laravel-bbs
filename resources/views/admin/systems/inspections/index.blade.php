@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 
-@section('title', '系统管理')
+@section('title', 'Quản lý hệ thống')
 
 @section('sidebar')
   @php($sidebar = 'system')
@@ -10,10 +10,10 @@
   <table class="table table-striped table-bordered">
     <thead>
     <tr>
-      <th width="40%">环境检测</th>
-      <th width="20%">推荐配置</th>
-      <th width="20%">当前状态</th>
-      <th width="20%">最低要求</th>
+      <th width="40%">Kiểm tra môi trường</th>
+      <th width="20%">Cấu hình đề xuất</th>
+      <th width="20%">Tình trạng hiện tại</th>
+      <th width="20%">Yêu cầu tối thiểu</th>
     </tr>
     </thead>
     <tbody>
@@ -23,7 +23,7 @@
           <td>
             {{ $environment['name'] }}
             @if (isset($environment['href']))
-              【<a href="{{ route($environment['href']) }}" target="_blank">更多信息</a>】
+              【<a href="{{ route($environment['href']) }}" target="_blank">Thêm thông tin</a>】
             @endif
           </td>
           <td>{{ $environment['recommend'] }}</td>
@@ -38,8 +38,8 @@
   <table class="table table-hover table-striped table-bordered">
     <thead>
     <tr>
-      <th width="60%">通信情况</th>
-      <th width="40%">状态</th>
+      <th width="60%">Tình hình giao tiếp</th>
+      <th width="40%">Tình trạng</th>
     </tr>
     </thead>
     <tbody>
@@ -52,14 +52,14 @@
            data-url="">
       <thead>
       <tr>
-        <th width="60%">系统文件、目录权限检查</th>
-        <th width="20%">当前状态</th>
-        <th width="20%">所需状态</th>
+        <th width="60%">Kiểm tra quyền của tập tin và thư mục hệ thống</th>
+        <th width="20%">Tình trạng hiện tại</th>
+        <th width="20%">Trạng thái bắt buộc</th>
       </tr>
       </thead>
       <tbody>
       <tr>
-        <td colspan="6" style="text-align: center;color: #c1c1c1;padding: 50px;">文件目录权限正常</td>
+        <td colspan="6" style="text-align: center;color: #c1c1c1;padding: 50px;">Quyền thư mục tập tin là bình thường</td>
       </tr>
       </tbody>
     </table>
@@ -70,10 +70,10 @@
            data-url="">
       <thead>
       <tr>
-        <th width="30%">系统空间占用</th>
-        <th width="20%">可用</th>
-        <th width="25%">总共</th>
-        <th width="25%">剩余</th>
+        <th width="30%">Không gian hệ thống bị chiếm dụng</th>
+        <th width="20%">Có sẵn</th>
+        <th width="25%">Tổng cộng</th>
+        <th width="25%">Còn lại</th>
       </tr>
       </thead>
       <tbody>
@@ -84,7 +84,7 @@
               {{ $utilization['name'] }}
               <a class="glyphicon glyphicon-question-sign text-muted pull-center" data-toggle="popover"
                  data-trigger="hover"
-                 data-placement="top" data-content="用户在站点进行操作的日志存放目录" data-original-title="" title="">
+                 data-placement="top" data-content="Thư mục lưu trữ nhật ký các thao tác của người dùng trên trang web" data-original-title="" title="">
               </a>
             </td>
             <td>{{ $utilization['free'] }}</td>
